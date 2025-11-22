@@ -1,22 +1,24 @@
-import HeroSection from "@/components/HeroSection";
-import ObjectiveSection from "@/components/ObjectiveSection";
-import FacilitatorsSection from "@/components/FacilitatorsSection";
-import CurriculumSection from "@/components/CurriculumSection";
-import FAQSection from "@/components/FAQSection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import NavigationBar from "@/components/NavigationBar";
+import ExkemaHero from "@/components/ExkemaHero";
+import ProgramSection from "@/components/ProgramSection";
+import ExkemaFacilitators from "@/components/ExkemaFacilitators";
+import MethodologySection from "@/components/MethodologySection";
+import ExkemaFAQ from "@/components/ExkemaFAQ";
+import ExkemaCTA from "@/components/ExkemaCTA";
+import ExkemaFooter from "@/components/ExkemaFooter";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <ObjectiveSection />
-      <FacilitatorsSection />
-      <CurriculumSection />
-      <FAQSection />
-      <CTASection />
-      <Footer />
-    </main>
+    <div className="min-h-screen">
+      <NavigationBar />
+      <ExkemaHero />
+      <ProgramSection />
+      <ExkemaFacilitators />
+      <MethodologySection />
+      <ExkemaFAQ />
+      <ExkemaCTA />
+      <ExkemaFooter />
+    </div>
   );
 };
 
