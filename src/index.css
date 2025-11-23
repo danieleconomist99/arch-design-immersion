@@ -7,12 +7,10 @@
 */
 
 @layer base {
-      :root {
-        /* Base (modo claro) */
-      - --background: #F5F7FA;        /* lo habíamos puesto claro */
-      - --foreground: #1B263B;
-      + --background: #050816;        /* oscuro tipo hero */
-      + --foreground: #F9FAFB;
+  :root {
+    /* Base (modo claro) */
+    --background: #F5F7FA;        /* antes: 218 15% 96% */
+    --foreground: #1B263B;        /* antes: 215 18% 14% */
 
 
     --card: #F5F7FA;
