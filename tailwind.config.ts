@@ -28,39 +28,48 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
+        /* Colores que vienen de las CSS vars (ahora pueden ser HEX) */
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+
         primary: {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
+
         secondary: {
           DEFAULT: "var(--secondary)",
           foreground: "var(--secondary-foreground)",
         },
+
         destructive: {
           DEFAULT: "var(--destructive)",
           foreground: "var(--destructive-foreground)",
         },
+
         muted: {
           DEFAULT: "var(--muted)",
           foreground: "var(--muted-foreground)",
         },
+
         accent: {
           DEFAULT: "var(--accent)",
           foreground: "var(--accent-foreground)",
         },
+
         popover: {
           DEFAULT: "var(--popover)",
           foreground: "var(--popover-foreground)",
         },
+
         card: {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
         },
+
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",
@@ -71,12 +80,21 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
+
+        /* Colores directos de marca EXKEMA (para usarlos sin vars si quieres) */
+        exkema: {
+          navy: "#011E41",
+          red: "#E30613",
+          light: "#F5F7FA",
+        },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
         "accordion-down": {
           from: {
@@ -95,6 +113,7 @@ export default {
           },
         },
       },
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
