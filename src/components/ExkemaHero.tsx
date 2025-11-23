@@ -41,13 +41,7 @@ const ExkemaHero = () => {
                 Reservar mi Cupo
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 h-14 px-8 font-medium"
-              >
-                Ver Programas
-              </Button>
+
             </div>
           </div>
           
