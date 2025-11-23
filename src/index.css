@@ -135,3 +135,11 @@
     --sidebar-ring: #E30613;
   }
 }
+
+@layer base {
+  header {
+    background-color: #011E41; /* azul EXKEMA */
+    color: #FFFFFF;            /* texto blanco en el header */
+  }
+}
+
