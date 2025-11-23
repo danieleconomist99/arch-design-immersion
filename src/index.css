@@ -9,8 +9,7 @@
 @layer base {
   :root {
     /* Base (modo claro) */
-    --background: #011E41;             /* azul EXKEMA para header y bg-background */
-    --foreground: #1B263B;             /* texto general oscuro */
+    --background: #F5F7FA;        /* color neutro o claro para el resto del sitio */
 
     /* nuevo: fondo general de la página (secciones) */
     --page-background: #F5F7FA;
@@ -79,7 +78,7 @@
     --sidebar-ring: #E30613;
 
     /* Nuevo color para el header opaco */
-    --header-background: #011641;
+    --header-background: #011E41; /* azul EXKEMA solo para el header */
   }
 
   .dark {
