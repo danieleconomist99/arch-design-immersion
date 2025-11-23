@@ -1,14 +1,17 @@
 import { Button } from "@/components/ui/button";
 
 /**
- * Barra de navegación principal.
- * - Fondo azul EXKEMA (`exkema.navy`).
- * - Textos en blanco.
+ * Barra de navegación principal con fondo sólido:
+ * - Usa la variable CSS --header-background para el fondo.
+ * - Textos en blanco (text-white).
  * - Botón de inscripción en rojo EXKEMA.
  */
 function NavigationBar() {
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-border bg-exkema-navy">
+    <nav
+      className="fixed inset-x-0 top-0 z-50 border-b border-border"
+      style={{ backgroundColor: "var(--header-background)" }}
+    >
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <h1 className="text-2xl font-bold tracking-tight text-white">
