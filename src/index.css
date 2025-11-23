@@ -2,160 +2,135 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-   All colors MUST be HSL.
+/* Design System (HEX version). 
+   Ahora NO usamos HSL porque tailwind.config ya lee var(--color) directamente.
 */
 
 @layer base {
   :root {
     /* Base (modo claro) */
-    --background: 218 15% 96%;
-    --foreground: 215 18% 14%;
+    --background: #F5F7FA;             /* fondo claro */
+    --foreground: #1B263B;             /* texto oscuro */
 
-    --card: 218 15% 96%;
-    --card-foreground: 215 18% 14%;
+    --card: #F5F7FA;
+    --card-foreground: #1B263B;
 
-    --popover: 218 15% 96%;
-    --popover-foreground: 215 18% 14%;
+    --popover: #F5F7FA;
+    --popover-foreground: #1B263B;
 
-    /* Color principal de marca (rojo EXKEMA) */
-    --primary: 356 93% 45%;
-    --primary-foreground: 0 0% 100%;
+    /* Color principal de marca EXKEMA */
+    --primary: #E30613;                /* rojo */
+    --primary-foreground: #FFFFFF;
 
-    /* Secundario (azul marino oscuro) */
-    --secondary: 218 60% 25%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secundario EXKEMA */
+    --secondary: #011E41;              /* azul marino */
+    --secondary-foreground: #FFFFFF;
 
     /* Neutros */
-    --muted: 218 30% 92%;
-    --muted-foreground: 215 10% 50%;
+    --muted: #E3E6EE;
+    --muted-foreground: #4B5563;
 
-    /* Acento (azul medio) */
-    --accent: 215 60% 35%;
-    --accent-foreground: 0 0% 100%;
+    /* Acento */
+    --accent: #083F80;
+    --accent-foreground: #FFFFFF;
 
-    /* Destructivo (errores) */
-    --destructive: 0 82% 50%;
-    --destructive-foreground: 0 0% 100%;
+    /* Destructivo */
+    --destructive: #DC2626;
+    --destructive-foreground: #FFFFFF;
 
     /* Bordes, inputs y ring */
-    --border: 218 30% 84%;
-    --input: 218 30% 84%;
-    --ring: 356 93% 45%;
+    --border: #D2D7E3;
+    --input: #D2D7E3;
+    --ring: #E30613;
 
     --radius: 0rem;
     
-    /* Tokens específicos de marca (puedes usarlos en componentes) */
-    --exkema-gold: 356 93% 45%;       /* usando rojo EXKEMA como “gold” */
-    --exkema-charcoal: 218 60% 25%;   /* azul marino oscuro */
-    --exkema-gray: 218 30% 84%;       /* gris claro */
+    /* Marca */
+    --exkema-gold: #E30613;
+    --exkema-charcoal: #011E41;
+    --exkema-gray: #D2D7E3;
 
-    /* Gradientes y bordes de sección */
+    /* Gradientes */
     --hero-gradient: linear-gradient(
       135deg,
-      hsl(218 60% 25% / 0.95),
-      hsl(218 60% 25% / 0.85)
+      rgba(1, 30, 65, 0.95),
+      rgba(1, 30, 65, 0.85)
     );
+
     --accent-gradient: linear-gradient(
       135deg,
-      hsl(356 93% 45%),
-      hsl(356 93% 55%)
+      #E30613,
+      #FF3550
     );
-    --section-border: hsl(218 30% 84%);
 
-    /* Sidebar (si la usas) */
-    --sidebar-background: 218 15% 98%;
-    --sidebar-foreground: 215 18% 14%;
-    --sidebar-primary: 356 93% 45%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 218 30% 90%;
-    --sidebar-accent-foreground: 215 18% 14%;
-    --sidebar-border: 218 30% 84%;
-    --sidebar-ring: 356 93% 45%;
+    --section-border: #D2D7E3;
+
+    /* Sidebar */
+    --sidebar-background: #F7F9FC;
+    --sidebar-foreground: #1B263B;
+    --sidebar-primary: #E30613;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #E9ECF5;
+    --sidebar-accent-foreground: #1B263B;
+    --sidebar-border: #D2D7E3;
+    --sidebar-ring: #E30613;
   }
 
   .dark {
     /* Base (modo oscuro) */
-    --background: 218 60% 15%;
-    --foreground: 0 0% 95%;
+    --background: #050816;
+    --foreground: #F9FAFB;
 
-    --card: 218 60% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: #0B0F26;
+    --card-foreground: #F9FAFB;
 
-    --popover: 218 60% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: #0B0F26;
+    --popover-foreground: #F9FAFB;
 
-    --primary: 356 93% 45%;
-    --primary-foreground: 0 0% 95%;
+    --primary: #E30613;
+    --primary-foreground: #F9FAFB;
 
-    --secondary: 218 60% 20%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: #0B1F3A;
+    --secondary-foreground: #F9FAFB;
 
-    --muted: 218 40% 25%;
-    --muted-foreground: 0 0% 70%;
+    --muted: #111827;
+    --muted-foreground: #9CA3AF;
 
-    --accent: 215 60% 35%;
-    --accent-foreground: 0 0% 95%;
+    --accent: #083F80;
+    --accent-foreground: #F9FAFB;
 
-    --destructive: 0 82% 40%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive: #B91C1C;
+    --destructive-foreground: #F9FAFB;
 
-    --border: 218 40% 25%;
-    --input: 218 40% 25%;
-    --ring: 356 93% 45%;
+    --border: #111827;
+    --input: #111827;
+    --ring: #E30613;
     
-    --exkema-gold: 356 93% 45%;
-    --exkema-charcoal: 218 60% 20%;
-    --exkema-gray: 218 40% 25%;
-    
+    --exkema-gold: #E30613;
+    --exkema-charcoal: #0B1F3A;
+    --exkema-gray: #1F2337;
+
     --hero-gradient: linear-gradient(
       135deg,
-      hsl(218 60% 10% / 0.95),
-      hsl(218 60% 15% / 0.85)
+      rgba(5, 8, 22, 0.95),
+      rgba(5, 8, 22, 0.85)
     );
+
     --accent-gradient: linear-gradient(
       135deg,
-      hsl(356 93% 45%),
-      hsl(356 93% 55%)
+      #E30613,
+      #FF3550
     );
-    --section-border: hsl(218 40% 25%);
+
+    --section-border: #1F2337;
     
-    --sidebar-background: 218 60% 15%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 356 93% 45%;
-    --sidebar-primary-foreground: 0 0% 95%;
-    --sidebar-accent: 218 60% 20%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 218 40% 25%;
-    --sidebar-ring: 356 93% 45%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply tracking-tight;
-  }
-}
-
-@layer utilities {
-  .section-divider {
-    @apply border-t border-border/50;
-  }
-  
-  .text-balance {
-    text-wrap: balance;
+    --sidebar-background: #050816;
+    --sidebar-foreground: #F9FAFB;
+    --sidebar-primary: #E30613;
+    --sidebar-primary-foreground: #F9FAFB;
+    --sidebar-accent: #0F1229;
+    --sidebar-accent-foreground: #F9FAFB;
+    --sidebar-border: #1F2337;
+    --sidebar-ring: #E30613;
   }
 }
