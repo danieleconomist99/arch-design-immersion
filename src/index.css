@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design System (HEX version). 
-   Ahora NO usamos HSL porque tailwind.config ya lee var(--color) directamente.
+/* Design System (HEX version). Ahora usamos HEX en las vars
+   y Tailwind las lee con var(--color) desde tailwind.config.ts.
 */
 
 @layer base {
   :root {
     /* Base (modo claro) */
-    --background: #F5F7FA;        /* antes: 218 15% 96% */
-    --foreground: #1B263B;        /* antes: 215 18% 14% */
+    --background: #011E41;             /* azul EXKEMA para header y bg-background */
+    --foreground: #1B263B;             /* texto general oscuro */
 
+    /* nuevo: fondo general de la página (secciones) */
+    --page-background: #F5F7FA;
 
     --card: #F5F7FA;
     --card-foreground: #1B263B;
@@ -45,7 +47,7 @@
     --ring: #E30613;
 
     --radius: 0rem;
-    
+
     /* Marca */
     --exkema-gold: #E30613;
     --exkema-charcoal: #011E41;
@@ -82,6 +84,9 @@
     --background: #050816;
     --foreground: #F9FAFB;
 
+    /* en dark el fondo de la página también oscuro */
+    --page-background: #050816;
+
     --card: #0B0F26;
     --card-foreground: #F9FAFB;
 
@@ -106,7 +111,7 @@
     --border: #111827;
     --input: #111827;
     --ring: #E30613;
-    
+
     --exkema-gold: #E30613;
     --exkema-charcoal: #0B1F3A;
     --exkema-gray: #1F2337;
@@ -124,7 +129,7 @@
     );
 
     --section-border: #1F2337;
-    
+
     --sidebar-background: #050816;
     --sidebar-foreground: #F9FAFB;
     --sidebar-primary: #E30613;
@@ -137,9 +142,25 @@
 }
 
 @layer base {
-  header {
-    background-color: #011E41; /* azul EXKEMA */
-    color: #FFFFFF;            /* texto blanco en el header */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    /* ANTES: @apply bg-background text-foreground font-sans antialiased; */
+    /* AHORA: fondo de página independiente de --background (para mantener secciones claras) */
+    background-color: var(--page-background);
+    color: var(--foreground);
+    @apply font-sans antialiased;
   }
 }
 
+@layer utilities {
+  .section-divider {
+    @apply border-t border-border/50;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
