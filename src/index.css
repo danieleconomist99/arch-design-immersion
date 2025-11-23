@@ -77,6 +77,9 @@
     --sidebar-accent-foreground: #1B263B;
     --sidebar-border: #D2D7E3;
     --sidebar-ring: #E30613;
+
+    /* Nuevo color para el header opaco */
+    --header-background: #011641;
   }
 
   .dark {
@@ -164,12 +167,3 @@
     text-wrap: balance;
   }
 }
-
-}
-@layer base {
-  :root {
-    /* …otras variables… */
-    --header-background: #011641; /* azul sólido para el header */
-  }
-}
-
