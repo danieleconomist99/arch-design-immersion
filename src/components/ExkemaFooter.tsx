@@ -1,3 +1,5 @@
+import exkemaLogo from "@/assets/exkema_logo.png"; // Ajusta la ruta/nombre si son diferentes
+
 const ExkemaFooter = () => {
   return (
     <footer className="py-16 bg-primary text-primary-foreground border-t-2 border-accent">
@@ -5,10 +7,9 @@ const ExkemaFooter = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-3xl font-bold mb-4">
-                <span className="text-primary-foreground">EXK</span>
-                <span className="text-accent">EMA</span>
-              </h3>
+              <div className="mb-4">
+                <img src={exkemaLogo} alt="EXKEMA" className="h-8" />
+              </div>
               <p className="text-primary-foreground/70 leading-relaxed">
                 Elevando el estándar de la arquitectura mediante programas 
                 intensivos con mentores de clase mundial.
