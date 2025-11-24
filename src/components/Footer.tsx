@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <p className="text-2xl font-light mb-2">
-                <span className="font-semibold">EXKEMA</span>
+              <img src={exkemaLogo} alt="EXKEMA" className="h-6" />
               </p>
               <p className="text-sm text-muted-foreground">
                 Elevando el estándar de la arquitectura
