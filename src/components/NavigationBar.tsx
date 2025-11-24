@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import exkemaLogo from "@/assets/exkema_logo.png";
+
 
 /**
  * Barra de navegación principal con fondo sólido:
@@ -14,9 +16,7 @@ function NavigationBar() {
     >
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
-        <h1 className="text-2xl font-bold tracking-tight text-white">
-          EXKEMA
-        </h1>
+      <img src={exkemaLogo} alt="EXKEMA" className="h-8" />
 
         {/* Menú de enlaces */}
         <ul className="hidden items-center gap-8 md:flex">
