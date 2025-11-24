@@ -1,3 +1,5 @@
+import exkemaLogo from "@/assets/exkema_logo.png"; // Ajusta la ruta al nombre de tu archivo
+
 const Footer = () => {
   return (
     <footer className="py-12 bg-card border-t border-border/50">
