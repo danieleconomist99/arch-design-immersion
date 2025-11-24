@@ -1,5 +1,5 @@
 
-import exkemaLogo from "@/assets/xk_logo.png"; // Ajusta la ruta/nombre si son diferentes
+import exkemaLogo from "@/assets/xk_logo.jpg"; // Ajusta la ruta/nombre si son diferentes
 
 
 const ExkemaFooter = () => {
